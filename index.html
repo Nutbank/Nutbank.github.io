@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>NutBank - Earn daily bank rewards</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="hd">
+                    <h2> <img src="images/logo.png" width="40px">
+                      NUTBANK </h2>
+                </div>
+                <div class="h" align="right">
+                    <span>
+                         DASHBOARD </span>
+                </div>
+            </div>
+        </div>
+        <div class="container" align="center">
+            <div class="row">
+                <div class="col">
+                    Contract Balance
+                    <br>
+                    <span class="hex" id="getBalance">
+                    0.00 TRON </span>
+                </div>
+                <div class="col">
+                    Lockbox Balance
+                    <br>
+                    <span class="hex lockboxTotal" id="lockboxTotal">
+                    0.00 TRON </span>
+                </div>
+                <div class="col">
+                    Lockbox Holder
+                    <br>
+                    <span class="hex" id="investorsCount">
+                    0.00 TRON </span>
+                </div>
+                <div class="col">
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    Total Withdrawn
+                    <br>
+                    <span class="hex" id="withdrawnProfitTotal">
+                    0.00 TRON </span>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col"> 
+                    <h1>
+                         Dashboard </h1> 
+                    <p>
+                         NutBank is built for longtime saving<br>
+                         Your lock deposit can be withdrawn anytime<br>
+                         Deposit tron in the lockbox to activate daily rewards </p> 
+                    <br>
+                    Get started instantly, You are never late and get rewarded forever. 
+                    <span class="yl">here</span> 
+                    <p style="color:lightgrey"><br>
+                      View our codes  on github  </p>
+                    <br> 
+                    <br> 
+                    <h3 class="push">
+                         LockBox </h3> 
+                    <h4 class="yl" id="mylbox">
+                        0.000 TRON </h4> 
+                    <button class="btn btn-danger" onclick="withdrawLockBoxAndClose()">
+                        DEACTIVATE LOCK BOX
+</button>                     
+                    <p>
+                         Note : By Withdrawing from your lockbox fund,You exit nutbank and future rewards stop. You can withdraw 100% of your fund without any fee .                   </p> 
+                </div>
+                <div class="col-5">
+                    <h5> 
+                      Deposit Tron In The LockBox</h5> 
+                    <p>
+                         Minimum deposit is 100 tron<br>
+                         Input the amount to Deposit </p>
+                    <form>
+                        <input type="number" class="darkone" id="buy" placeholder="Amount Of Tron To Spend" vlaue="TAQsPTD24zkCof8hgNAu9QQKj7m1duErzf" />
+                        <br> 
+                        <br>
+                        <span style="color:red">*</span>
+                        <br>
+                        <input class="darkone" placeholder="Affiliate Adrress" id="addrs" required />
+                        <br>
+                        <button type="submit" class="btn btn-primary" id="buybtn">
+                            DEPOSIT
+</button>                         
+                    </form>
+                    <p>
+                         84% to the LockBox, 12% Contract (if Refferal used 10%) , 4% general fee. </p>
+                    <br>
+                    <h5> 
+                     Your Reward Earning</h5> 
+                    <h4 class="yl" id="calculateProfit">
+                        0.000 TRON </h4> 
+                    <button class="btn btn-danger" onclick="withdraw()">
+                        WITHDRAW
+</button>
+                    <button class="btn btn-success" onclick="reinvest()">
+                        COMPOUND
+</button>
+                    <p>
+                         Withdarw anytime, 3% stays in the contract , 4% grenral fee, On compound 84 goes to LockBox and 15% to the contract </p>
+                    <h5> 
+                     Your Total Earnings Withdrawn</h5> 
+                    <h4 id="getWithdrawn">
+                        0.000 TRON </h4> 
+                </div>
+                <div class="col">
+                    <h5>
+                        Global Rewards Avaliable </h5>
+                    <br>
+                    <h4 class="yl" id="guaranteedBalance">
+                        0.000 TRON </h4> 
+                    <h5 class="">
+                         Current Daily Percent <span class="green">3% </span></h5>
+                    <div class="curve">
+</div>
+                    <h3 class="">
+                         Affiliate link </h3>
+                    <p id="intialAccount">
+                        ? </p>
+                    <p>
+                        You can earn more by using Nutbank affliate partner link. Partner with Nutbank to earn on top of your rewards. Earn 10% of your referee's LockBox Deposit. </p>
+                    <br>
+                    <h4 class="yl" id="affiliateCommission">
+                        0.000 TRON </h4> 
+                    <p>
+                        Copy and paste your affliate link and share it anywhere to earn more.
+                        Don't Span. </p>
+                    <br>
+                    <div align="right">
+                        <i class="fab fa-twitter"></i> 
+                        <i class="fab fa-telegram-plane"></i>
+                        <i class="fab fa-discord"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="tron.js"></script>
+    </body>
+</html>
